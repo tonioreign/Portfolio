@@ -1,0 +1,267 @@
+:root {
+  /* colors */
+  --primary-color: hsl(233, 14%, 13%);
+  --navlink-color: hsl(0, 0%, 85%);
+  --background-logo: hsl(218, 54%, 28%);
+  --secondary-color: #ef3c39;
+  --color: #b0b2c3;
+
+  /* font sizes */
+  --xlarge-font: 72px;
+  --large-font: 48px;
+  --med-font: 36px;
+  --small-font: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+header {
+  background: url(../img/BackgoundLogo.png) no-repeat center;
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  padding: 0.5% 15%;
+}
+
+/* navbar styling */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.sticky {
+  position: fixed;
+  z-index: 999;
+  height: 8vh;
+  background: var(--secondary-color);
+  transition: 0.6s;
+}
+
+.navbar.sticky ul li a {
+  color: hsl(0, 0%, 0%);
+}
+
+.navbar .nav__links {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar .nav__links li {
+  list-style: none;
+}
+
+.navbar .nav__links li a {
+  color: var(--navlink-color);
+  font-size: var(--small-font);
+  font-weight: 500;
+}
+
+.navbar .nav__links li a:hover {
+  color: #fff;
+}
+
+/* home styling */
+.home {
+  width: 100%;
+}
+
+.home-content {
+  position: absolute;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+  font-size: var(--med-font);
+  color: #fff;
+}
+
+.home-content .text-1 span {
+  color: var(--secondary-color);
+  font-size: var(--large-font);
+  position: relative;
+}
+
+.home-content .text-2 {
+  font-size: var(--small-font);
+}
+
+.resume {
+  position: relative;
+  width: max-content;
+  margin-top: 20px;
+  font-size: var(--small-font);
+  color: #fff;
+  overflow: hidden;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: 0.5s;
+  animation: fadeUp 2s ease 2s forwards;
+}
+
+.resume:hover {
+  background: var(--secondary-color);
+  box-shadow: 0 0 50px var(--secondary-color);
+  transition-delay: 0.5s;
+}
+
+.resume::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--secondary-color);
+  border-left: 2px solid var(--secondary-color);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.resume:hover::before {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0s;
+}
+
+.resume:hover::after {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0s;
+}
+
+.resume::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid var(--secondary-color);
+  border-right: 2px solid var(--secondary-color);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.home-content .text-1 span::before,
+.home-content .text-1 span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.home-content .text-1 span::before {
+  background: var(--primary-color);
+  animation: typing 4s steps(7) 1s infinite;
+}
+
+.home-content .text-1 span::after {
+  width: 0.075em;
+  background: black;
+  animation: typing 4s steps(7) 1s infinite, blinking 750ms steps(7) infinite;
+}
+
+/* about me styling */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: hsl(234, 14%, 73%);
+}
+
+.about .title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-top: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--med-font);
+  color: #fff;
+  font-weight: 500;
+}
+
+.section-containers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+.about .left-container {
+  width: 600px;
+}
+
+.about .left-container p {
+  font-size: var(--small-font);
+}
+
+.about .right-container {
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-start: 2/3;
+  gap: 80px;
+}
+
+.about .right-container .logo-container {
+  width: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 3px solid var(--secondary-color);
+  border-radius: 10px;
+}
+
+.about .right-container img {
+  width: 75px;
+  height: 75px;
+}
+
+/* keyframes */
+
+@keyframes typing {
+  40%,
+  60% {
+    left: 100%;
+  }
+}
+
+@keyframes blinking {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
