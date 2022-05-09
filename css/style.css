@@ -267,6 +267,7 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 80px;
+  /* flex-wrap: wrap; */
 }
 
 .about .right-container .logo-container {
@@ -305,6 +306,106 @@ header {
   font-weight: 500;
 }
 
+.project .portfolio-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-image {
+  height: 30rem;
+  background-color: var(--color);
+  margin-bottom: 2.5rem;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.25s;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.portfolio-card:hover .card-image,
+.portfolio-card:focus .card-image {
+  background-color: var(--secondary-color);
+}
+
+.card-heading {
+  color: #fff;
+}
+
+.card-title {
+  font-size: 2rem;
+}
+
+.card-subtitle {
+  font-size: 1.4rem;
+  opacity: 0.8;
+}
+
+.large-button-container {
+  display: flex;
+}
+
+.large-button {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+  color: #fff;
+}
+
+.button-fill {
+  position: relative;
+  outline: 2px solid var(--color);
+  transition: color 0.25s;
+  overflow: hidden;
+}
+
+.button-fill:hover,
+.button-fill:focus {
+  color: var(--secondary-color);
+}
+
+.button-fill::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: var(--color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: transform 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.large-button.button-fill::before {
+  border-radius: 50%;
+}
+
+.button-fill:hover::before,
+.button-fill:focus::before {
+  transform: scale(1);
+}
+
 /* contact styling */
 
 .contact {
@@ -319,7 +420,7 @@ header {
 
 .contact .contact-title {
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 45%;
   margin-top: 50px;
   text-align: center;
@@ -336,7 +437,7 @@ header {
 
 .contact-form p {
   position: absolute;
-  top: 25%;
+  top: 20%;
   left: 65.7%;
   text-align: justify;
   font-size: var(--xsmall-font);
@@ -346,14 +447,14 @@ header {
 
 .form {
   position: absolute;
-  top: 65%;
+  top: 60%;
   left: 50%;
   transform: translate(-35%, -50%);
   width: 600px;
   height: 700px;
   display: grid;
   grid-template-columns: 1fr;
-  background-color: #fff;
+  background: var(--secondary-color);
   grid-gap: 16px;
   padding: 32px;
   border-radius: 16px;
@@ -363,12 +464,15 @@ header {
 .form .element {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .form .element label {
   display: block;
   margin-bottom: 5px;
-  color: #888;
+  color: #fff;
+  font-size: var(--xsmall-font);
+  font-weight: 500;
 }
 
 .form .element input,
@@ -376,6 +480,21 @@ header {
   border-radius: 8px;
   padding: 12px 16px;
   background: #f3f3f3;
+}
+
+.submit-c {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.submit-form {
+  cursor: pointer;
+  font-weight: 500;
+  width: 50%;
+  text-align: center;
 }
 
 /* keyframes */
