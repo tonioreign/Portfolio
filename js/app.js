@@ -38,3 +38,18 @@ mousea.addEventListener('click', e => {
 
 navbar.addEventListener('click', smoothScroll);
 window.addEventListener('scroll', stickyNav);
+
+// SCROLL REVEAL
+const sr = ScrollReveal({
+  distance: '50px',
+  duration: 1100,
+  easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+});
+
+sr.reveal('.home-content', { origin: 'left' });
+sr.reveal('.mouse-container', { origin: 'right' });
+sr.reveal('.navbar', { origin: 'top' });
+sr.reveal('.title', { origin: 'top' });
+sr.reveal('.left-container', { origin: 'left' });
+sr.reveal('.right-container', { origin: 'right' });
+sr.reveal('.portfolio-card', { interval: 500 });

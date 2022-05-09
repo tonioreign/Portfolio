@@ -238,6 +238,7 @@ header {
   position: absolute;
   top: 10%;
   left: 50%;
+  transform: translate(-50%, -50%);
   margin-top: 50px;
   text-align: center;
   text-transform: uppercase;
@@ -308,16 +309,17 @@ header {
 
 .project .portfolio-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2.5rem;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .card-image {
-  height: 30rem;
+  height: 35rem;
+  width: 30rem;
   background-color: var(--color);
   margin-bottom: 2.5rem;
   border-radius: 0.4rem;
@@ -422,6 +424,7 @@ header {
   position: absolute;
   top: 5%;
   left: 45%;
+  transform: translate(-50%, -50%);
   margin-top: 50px;
   text-align: center;
   text-transform: uppercase;
@@ -437,19 +440,18 @@ header {
 
 .contact-form p {
   position: absolute;
-  top: 20%;
-  left: 65.7%;
-  text-align: justify;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: var(--xsmall-font);
   color: #fff;
-  transform: translate(-75%, -35%);
 }
 
 .form {
   position: absolute;
   top: 60%;
   left: 50%;
-  transform: translate(-35%, -50%);
+  transform: translate(-50%, -50%);
   width: 600px;
   height: 700px;
   display: grid;
@@ -495,6 +497,11 @@ header {
   font-weight: 500;
   width: 50%;
   text-align: center;
+}
+
+/* media queries */
+
+@media screen and (min-width: 768px) {
 }
 
 /* keyframes */
