@@ -19,10 +19,10 @@
         <div class="logo"><img src="img/logo.png" alt="brand logo" /></div>
 
         <ul class="nav__links">
-          <li><a class="links" href="#">Home</a></li>
+          <li><a class="links" href="#home">Home</a></li>
           <li><a class="links" href="#about">About</a></li>
-          <li><a class="links" href="#">Projects</a></li>
-          <li><a class="links" href="#">Contact</a></li>
+          <li><a class="links" href="#project">Projects</a></li>
+          <li><a class="links" href="#contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -33,6 +33,14 @@
           <div class="text-2"><em>I am a Front-end Developer</em></div>
           <a class="resume" href="#">Download Resume</a>
         </div>
+        <div class="mouse-container">
+          <h4>Scroll down</h4>
+          <span class="mouse mousea" href="#about">
+            <span class="mouse-wheel"></span>
+          </span>
+        </div>
+
+
       </section>
     </header>
     <main>
@@ -43,11 +51,11 @@
           <div class="left-container">
             <p>
               Fully committed to the philosophy of life-long learning, I am
-              attending Full Sail University CS Major currently with a 4.0 GPA.
-              I always try to share my knowledge and past experiences because I
-              believe that helping others mean helping yourself. When i'm not at
-              my computer I like to spend my time coaching, reading, and being a
-              father.
+              attending Full Sail University. Computer Science Major currently
+              with a 4.0 GPA. I always try to share my knowledge and past
+              experiences because I believe that helping others mean helping
+              yourself. When i'm not at my computer I like to spend my time
+              coaching, reading, and being a father.
             </p>
           </div>
           <div class="right-container">
@@ -65,14 +73,107 @@
               <p>sass</p>
             </div>
             <div class="logo-container">
-              <img src="./img/JavaScript.png" alt="sass logo" />
-              <p>sass</p>
+              <img src="./img/JavaScript.png" alt="javascript logo" />
+              <p>javascript</p>
             </div>
             <div class="logo-container">
               <img src="./img/react.png" alt="react logo" />
               <p>react</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- Project section starting -->
+      <section class="project container" id="project">
+        <div class="project-content">
+          <div class="title">
+            <h2>Projects</h2>
+            <p>Quality over quantity</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact section starting -->
+      <section class="contact container" id="contact">
+        <div class="contact-content">
+          <div class="contact-title">
+            <h2>Contact Me</h2>
+          </div>
+          <div class="contact-form">
+            <p>
+              Fill out the form below to get in touch with me! I will try to get
+              back to you within 48 hours. If I do not reply within that time
+              frame please feel free to use the form again.
+            </p>
+            <form action="" class="form">
+              <div class="element">
+                <label for="firstname">First name*</label>
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  required
+                  class="form-element"
+                  placeholder="John"
+                />
+              </div>
+
+              <div class="element">
+                <label for="lastname">Last name*</label>
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  required
+                  class="form-element"
+                  placeholder="Doe"
+                />
+              </div>
+
+              <div class="element">
+                <label for="email">Email address*</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  class="form-element"
+                  placeholder="john.doe@example.com"
+                />
+              </div>
+
+                <div class="element">
+                  <label for="company">Company</label>
+                  <input
+                    type="text"
+                    name="company"
+                    id="company"
+                    class="form-element"
+                    placeholder="john.doe@example.com"
+                  />
+                </div>
+
+                <div class="element">
+                  <label for="number">Phone number*</label>
+                  <input
+                    type="number"
+                    name="number"
+                    id="number"
+                    class="form-element"
+                    placeholder="1-(888)-888-888"
+                  />
+                </div>
+
+                <div class="element">
+                  <label for="message">Leave a message below</label>
+                  <textarea name="message" id="message" class="form-elements" placeholder="Leave your message here"></textarea>
+                </div>
+                <div class="element">
+                  <input type="submit" value="SEND MESSAGE"/>
+                </div>
+                </div>
+            </form>
         </div>
       </section>
     </main>
