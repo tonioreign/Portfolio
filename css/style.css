@@ -42,7 +42,7 @@ header {
 }
 
 .container {
-  padding: 0.5% 15%;
+  padding: 0.5% 10%;
 }
 
 /* navbar styling */
@@ -440,7 +440,7 @@ header {
 
 .contact-form p {
   position: absolute;
-  top: 22%;
+  top: 24%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: var(--xsmall-font);
@@ -449,7 +449,7 @@ header {
 
 .form {
   position: absolute;
-  top: 60%;
+  top: 63%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 600px;
